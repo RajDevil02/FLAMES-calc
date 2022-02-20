@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>Write something in the text field to trigger a function.</p>
+
+<input type="text" id="myInput" name="nname" placeholder="king"><br><br>
+
+<input type="text" id="myInput1" name="fname"><br><br>
+
+<button onclick="myFunction()">Click me</button>
+
+<p id="demo"></p>
+<p id="jkl"></p>
+
+<script>
+function myFunction() {
+  var a;
+  var b;
+  var count1;
+  var d=0;
+  var x=document.getElementById("myInput").value;
+  a=x.toUpperCase();
+  var y=document.getElementById("myInput1").value;
+  b=y.toUpperCase();
+  
+  for(var i=0; i < a.length; i++){
+    for (var j=0;j<b.length;j++){
+      if (a[i]==b[j]){
+        b=b.replace(b[j],"");
+     d=d+1;
+        break;
+
+
+        }
+
+    
+    }
+      }
+      
+  var zi = x.length+y.length;
+   count1=zi-2*d
+    document.getElementById("jkl").innerHTML = count1;
+  
+  
+    var list1;
+    var modu=0;
+    var sli=0;
+    var left;
+    var right;
+    
+    
+    if (count1>0){
+      var list1="FLAMES"
+   
+   
+    while (list1.length>1){
+      var modu = count1%list1.length;
+      var sli = modu-1;
+      if (sli>=0){
+         left = list1.slice(0,sli);
+         right = list1.slice(sli+1);
+        list1=right+left;
+        
+
+      }else{
+        list1=list1.slice(0,list1.length-1);
+      }}
+     
+   
+  
+  switch (list1) {
+  case 'F':
+    day = "Friends";
+    break;
+  case 'L':
+    day = "Love";
+    break;
+  case 'A':
+    day = "Affectionate";
+    break;
+  case 'M':
+    day = "Marraige";
+    break;
+  case 'E':
+    day = "Enemy";
+    break;
+  case 'S':
+    day = "Siblings";
+    
+  
+}
+  document.getElementById("demo").innerHTML = day;
+}
+}
+
+// }
+    
+  </script>
+</script>
+
+</body>
+</html>
+
