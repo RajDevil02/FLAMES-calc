@@ -7,6 +7,154 @@
 <input type="text" id="myInput" name="nname" placeholder="king"><br><br>
 
 <input type="text" id="myInput1" name="fname"><br><br>
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Welcome to the Calculator</title>
+	<link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@700&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="uisample.css">
+	
+	
+</head>
+<body>
+	<div class="container-fluid">
+  
+    <h1>Welcome to the Calculator</h1>      
+    
+  </div>
+  
+	<table class="names">
+		<tr>
+			<th style="width:70%">Enter you Name: </th>
+			<td><input type="text" name="fname" id="myInput" placeholder="Your Name"></th>
+		</tr>
+		<tr>
+			<th>Enter the Second Name: </th>
+			<td style="margin-left: 10px"><input type="text" name="fname" id="myInput1" placeholder="Second Name"></th>
+		</tr>
+	</table><br>
+
+	<table>
+		<th>
+			<button type="button" class="btn btn-success" onclick="myFunction()">Calculate<br></button>
+		</th>
+	</table>
+	
+	<table class="names"><br>
+		<tr>
+			<th>Your Relation is: </th>
+			<th><input type="text" name="resname" id="res1"></th>
+		</tr></table>
+		
+		
+		
+	</div>
+	<p id="jkl"></p>
+	<script>
+function myFunction() {	
+	//Assign Values
+  var a;
+  var b;
+  var count1;
+  var d=0;
+  var x=document.getElementById("myInput").value;
+  var y=document.getElementById("myInput1").value;
+
+  
+
+  // Replace the space
+
+  x=x.trim();
+  y=y.trim();
+
+  a=x.toUpperCase();
+  
+  b=y.toUpperCase();
+
+  // Compare and replace
+  
+  for(var i=0; i < a.length; i++){
+    for (var j=0;j<b.length;j++){
+      if (a[i]==b[j]){
+        b=b.replace(b[j],"");
+     d=d+1;
+        break;
+
+
+        }
+
+    
+    }
+      }
+      
+  var zi = x.length+y.length;
+   count1=zi-2*d
+    document.getElementById("jkl").innerHTML = x.length;
+
+   
+  
+  
+    var list1;
+    var modu=0;
+    var sli=0;
+    var left;
+    var right;
+    
+    
+    if (count1>0){
+      var list1="FLAMES"
+   
+   
+    while (list1.length>1){
+      var modu = count1%list1.length;
+      var sli = modu-1;
+      if (sli>=0){
+         left = list1.slice(0,sli);
+         right = list1.slice(sli+1);
+        list1=right+left;
+        
+
+      }else{
+        list1=list1.slice(0,list1.length-1);
+      }}
+     
+   
+  
+  switch (list1) {
+  case 'F':
+    day = "Friends";
+    break;
+  case 'L':
+    day = "Love";
+    break;
+  case 'A':
+    day = "Affectionate";
+    break;
+  case 'M':
+    day = "Marraige";
+    break;
+  case 'E':
+    day = "Enemy";
+    break;
+  case 'S':
+    day = "Siblings";
+    
+   
+  
+}
+  res1.value=day;
+}
+}
+</script>
+	
+
+
+</body>
+</html>
+
 
 <button onclick="myFunction()">Click me</button>
 
