@@ -1,0 +1,73 @@
+body {
+  height: 100%;
+	background-image: url('bg3.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+  
+}
+
+h1 {
+	font-size: 50px;
+	color: #e32709;
+	font-family: 'Tomorrow', sans-serif;
+	
+}
+
+/*.names {
+  margin: auto;
+  width: 50%;
+  /*border: 3px solid green;*
+  padding: 10px;
+  border-style: ridge;
+  font-family: serif;
+  font-size: 25px;
+  border-collapse: separate;
+  border-spacing: 15px;
+  position: relative;
+  border-width: 0px;*/
+}
+
+button {
+	
+	cursor: pointer;
+	margin-left:600px; 
+  width: 100px;
+  border: 3px solid green;
+  padding: 10px;
+  border-style: ridge;
+  font-family: serif;
+  font-size: 25px;
+   border-collapse: separate;
+  border-spacing: 15px;
+}
+
+/*button:hover {
+	background-color: greenyellow;
+}*/
+@media only screen and (max-width: 800px){
+  table {
+    width: 87%;
+    margin-left: 20px;
+
+  }
+  button {
+    margin-left: 42%;
+    width: 91px;
+    }
+  h1{
+    text-align: center;
+  }
+  input {
+    width: 208px;
+    border-left: 5px solid red;
+    border-radius: 4px;
+    
+      
+  }
+  th {
+    box-sizing: border-box;
+    font-size: 25px;
+
+  }
+ 
+}
