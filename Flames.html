@@ -23,8 +23,8 @@
   <p>Relation</p>
   <input type="text" name="data[resname]" id="res1" style="width: 315px"></th>
  </div>
-  
-  <p id="jkl"></p>
+ <p id="jkl"></p>
+
   
   <script>
     document.getElementById('mybtn').addEventListener('click',myFunction);
@@ -37,12 +37,24 @@ function myFunction() {
   var x=document.getElementById("myInput").value;
   var y=document.getElementById("myInput1").value;
 
-  
 
   // Replace the space
 
   x=x.trim();
   y=y.trim();
+
+  //Remoe the inner space
+for (var i=0; i<x.length;i++){
+    if(x[i]==" "){
+      x=x.replace(x[i],"");
+    }
+  }
+
+  for (var j=0; j<y.length;j++){
+    if(y[j]==" "){
+      y=y.replace(y[j],"");
+    }
+  }
 
   a=x.toUpperCase();
   
@@ -65,8 +77,8 @@ function myFunction() {
       }
       
   var zi = x.length+y.length;
-   count1=zi-2*d
-    document.getElementById("jkl").innerHTML = x.length;
+    var count1=zi-2*d
+    
 
    
   
