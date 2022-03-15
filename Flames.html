@@ -1,59 +1,35 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title>Welcome to the Calculator</title>
-	<link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@700&display=swap" rel="stylesheet">
-	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
-	<link rel="stylesheet" type="text/css" href="uisample.css">
-	
-	
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Welcome to the Calculator</title>
+  <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="uisample1.css">
+  
+  
 </head>
 <body>
-	<div class="container-fluid">
+  <h1>Welcome to FLAMES Calculator</h1>
+  <div>
+    <form action="https://sheetdb.io/api/v1/4pmcvjkps4k16" method="post" id="sheetdb-form">
   
-    <h1>Welcome to the FLAMES Calculator</h1>      
-    
-  </div><br>
+  <p>Enter your Name</p>
+  <input type="text" name="data[fname]" id="myInput" placeholder="Your Name" style="width: 315px"><br><br>
+  <p>Enter the Second Name</p>
+  <input type="text" name="data[sname]" id="myInput1" placeholder="Partner's Name" style="width: 315px"><br><br>
+  <button type="submit" id="mybtn">Calculate<br></button><br><br>
+  <p>Relation</p>
+  <input type="text" name="data[resname]" id="res1" style="width: 315px"></th>
+ </div>
   
-	<table class="names">
-		<tr>
-			<th>Enter your Name </th>
-		</tr>
-		<tr>
-			<td><input type="text" name="fname" id="myInput" placeholder="Your Name" style="width: 315px"></th>
-		</tr>
-		<tr>
-			<th>Enter the Second Name </th>
-		</tr>
-		<tr>
-			<td style="margin-left: 10px"><input type="text" name="fname" id="myInput1" placeholder="Second Name" style="width: 315px"></th>
-		</tr>
-	</table><br>
-
-	<table>
-		<th>
-			<button type="button" class="btn btn-success" onclick="myFunction()" style="margin-left: 50px">Calculate<br></button>
-		</th>
-	</table>
-	
-	<table class="names"><br>
-		<tr>
-			<th>Your Relationship is</th>
-		</tr>
-		<tr>
-			<th><input type="text" name="resname" id="res1" style="width: 315px"></th>
-		</tr>
-	</table>
-		
-		
-		
-	</div>
-	<p id="jkl"></p>
-	<script>
-function myFunction() {	
-	//Assign Values
+  <p id="jkl"></p>
+  
+  <script>
+    document.getElementById('mybtn').addEventListener('click',myFunction);
+function myFunction() { 
+  //Assign Values
   var a;
   var b;
   var count1;
@@ -147,7 +123,22 @@ function myFunction() {
 }
 }
 </script>
-	
+<script>
+  var form = document.getElementById('sheetdb-form');
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    fetch(form.action, {
+        method : "POST",
+        body: new FormData(document.getElementById("sheetdb-form")),
+    }).then(
+        response => response.json()
+    ).then((html) => {
+      // you can put any JS code here
+      
+    });
+  });
+</script>
+  
 
 
 </body>
