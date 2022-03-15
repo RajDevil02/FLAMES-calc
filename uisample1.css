@@ -1,0 +1,21 @@
+body {
+	background-image: url('bg4.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+@media only screen and (max-width: 600px){
+	div {
+	text-align: center;
+}
+h1{
+	text-align: center;
+	color: #00ffdc;
+	font-family: "Times New Roman", Times, serif;
+	font-weight: bold;
+	}
+p {
+	font-size: 30px;
+	color: #ff0081;
+} 
+}
