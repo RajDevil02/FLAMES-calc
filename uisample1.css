@@ -18,4 +18,10 @@ p {
 	font-size: 30px;
 	color: #ff0081;
 } 
+
+button {
+	margin-right: 8px;
+	background-color: #849f09;
+	color: white;
+}
 }
