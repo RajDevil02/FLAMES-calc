@@ -3,7 +3,7 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Welcome to the Calculator</title>
+  <title>FLAMES CALCULATOR</title>
   <link href="https://fonts.googleapis.com/css2?family=Tomorrow:wght@700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="uisample1.css">
@@ -12,7 +12,7 @@
   
 </head>
 <body>
-  <h1>Welcome to FLAMES Calculator</h1>
+  <h1>FLAMES CALCULATOR</h1>
   <div>
     <form action="https://sheetdb.io/api/v1/4pmcvjkps4k16" method="post" id="sheetdb-form" autocomplete = 'off'>
   
@@ -20,7 +20,7 @@
   <input type="text" name="data[fname]" id="myInput" placeholder="Your Name" style="width: 315px"><br><br>
   <p>Enter the Second Name</p>
   <input type="text" name="data[sname]" id="myInput1" placeholder="Partner's Name" style="width: 315px"><br><br>
-  <button type="submit" id="mybtn">Calculate<br></button><br><br>
+  <button type="submit" id="mybtn">Calculate</button><button type="reset" id="reset">Reset<br></button><br><br>
   <p>Relation</p>
   <input type="text" name="data[resname]" id="res1" style="width: 315px"></th>
  </div>
@@ -41,21 +41,8 @@ function myFunction() {
 
   // Replace the space
 
-  x=x.trim();
-  y=y.trim();
-
-  //Remoe the inner space
-for (var i=0; i<x.length;i++){
-    if(x[i]==" "){
-      x=x.replace(x[i],"");
-    }
-  }
-
-  for (var j=0; j<y.length;j++){
-    if(y[j]==" "){
-      y=y.replace(y[j],"");
-    }
-  }
+      x=x.replace(/ /g,"");
+      y=y.replace(/ /g,"");
 
   a=x.toUpperCase();
   
@@ -156,4 +143,3 @@ for (var i=0; i<x.length;i++){
 
 </body>
 </html>
-
